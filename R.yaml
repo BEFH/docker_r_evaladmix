@@ -136,7 +136,6 @@ dependencies:
   - r-knitr=1.42=r42hc72bb7e_1
   - r-labeling=0.4.2=r42hc72bb7e_2
   - r-lattice=0.20_45=r42h06615bd_1
-  - r-libzlib=1.2.13
   - r-lifecycle=1.0.3=r42hc72bb7e_1
   - r-lubridate=1.9.2=r42h133d619_1
   - r-magrittr=2.0.3=r42h06615bd_1
