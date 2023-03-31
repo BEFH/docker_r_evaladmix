@@ -17,6 +17,7 @@ ARG CPLUS_INCLUDE_PATH=/opt/conda/include
 ARG C_INCLUDE_PATH=/opt/conda/include
 RUN git clone https://github.com/GenisGE/evalAdmix.git /evaladmix && \
     cd /evaladmix && \
+    git checkout 89ba805 && \
     make clean && \
     make
 # below is necessary for the env to work with shell sessions
