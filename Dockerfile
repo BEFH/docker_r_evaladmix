@@ -22,4 +22,4 @@ RUN git clone https://github.com/GenisGE/evalAdmix.git /evaladmix && \
     make
 # below is necessary for the env to work with shell sessions
 ENV PATH "$MAMBA_ROOT_PREFIX/bin:/evaladmix:$PATH"
-ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "python3", "/evaladmix/evalAdmix"]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/evaladmix/evalAdmix"]
