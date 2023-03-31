@@ -15,6 +15,8 @@ USER mambauser
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 RUN git clone https://github.com/GenisGE/evalAdmix.git /evaladmix && \
     cd /evaladmix && \
+    CPLUS_INCLUDE_PATH=$CONDA_PREFIX/include:$CPLUS_INCLUDE_PATH && \
+    make clean && \
     make
 # below is necessary for the env to work with shell sessions
 ENV PATH "$MAMBA_ROOT_PREFIX/bin:/evaladmix:$PATH"
