@@ -13,11 +13,10 @@ RUN mkdir /evaladmix && \
 USER mambauser
 # you must include the below arg to activate the env within the dockerfile
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
+ARG CPLUS_INCLUDE_PATH=/opt/conda/include
+ARG C_INCLUDE_PATH=/opt/conda/include
 RUN git clone https://github.com/GenisGE/evalAdmix.git /evaladmix && \
     cd /evaladmix && \
-    CPLUS_INCLUDE_PATH=$CONDA_PREFIX/include:$CPLUS_INCLUDE_PATH && \
-    /usr/bin/env && \
-    ls -l $CONDA_PREFIX/include && \
     make clean && \
     make
 # below is necessary for the env to work with shell sessions
