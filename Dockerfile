@@ -14,7 +14,7 @@ USER mambauser
 # you must include the below arg to activate the env within the dockerfile
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
 RUN git clone https://github.com/GenisGE/evalAdmix.git /evaladmix && \
-    cd evaladmix && \
+    cd /evaladmix && \
     make
 # below is necessary for the env to work with shell sessions
 ENV PATH "$MAMBA_ROOT_PREFIX/bin:/evaladmix:$PATH"
